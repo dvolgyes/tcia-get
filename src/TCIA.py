@@ -306,7 +306,7 @@ if __name__ == "__main__":
         dest='key',
         action='store',
         help='API key',
-        default=None
+        default=os.environ.get('TCIA_KEY')
     )
 
     parser.add_option(
