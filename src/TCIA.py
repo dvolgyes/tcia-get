@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: future_fstrings -*-
 
 from collections import defaultdict
 from contracts import contract, new_contract
@@ -86,7 +87,10 @@ def getResponseString(response):
 def join_dicts(a,b,key):
     for x,y in itertools.product(a,b):
         if x.get(key)==y.get(key):
-            yield {**x, **y}
+            z = x.copy() 
+            z.update(y)
+            yield z
+
 
 class TCIA():
 
