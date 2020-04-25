@@ -1,2 +1,2 @@
 pycontracts==1.8.14
-numpy
+numpy==1.18.3
